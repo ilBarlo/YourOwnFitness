@@ -1,0 +1,696 @@
+body{
+    margin: 0;  /* Altrimenti tutte le sezioni verrebbero staccate */
+    background-image: linear-gradient(135deg, grey, rgb(220, 214, 192));
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  header{
+    background-color: #4A4743;
+    position: relative;
+    text-align: center;
+    font-family: "Copperplate", fantasy;
+    padding: 10px;
+  }
+
+  .login{
+    padding: 2px;
+    margin: 0px;
+    width: 5%;
+    background-color: rgba(192, 109, 26, 0.6);
+    border-style: solid;
+    border-color: grey;
+    border-width: 2px;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    text-align: center;
+    text-transform: none;
+    text-shadow: none;
+    text-decoration: none;
+    font-family: "Copperplate", fantasy;
+    justify-content: center;
+  }
+
+  .login .Logo{
+    display: block;
+  }
+
+  /*Proprietà del menù*/
+  nav{
+    background-color: rgb(168, 110, 35);
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 0px black;
+    font-family: "Copperplate", fantasy;
+    font-size: 130%;
+    height: 45px;
+  }
+
+  nav ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  }
+
+  nav li {
+    display: inline-block;
+    padding: 0;
+  }
+
+  /*nav li form:hover{
+    background-color: rgb(201, 130, 42);
+  }*/
+
+  nav li a{
+    color: white;
+    text-decoration: none;
+  }
+
+  /*Fine proprietà del menù*/
+
+  .dropdown-content{
+    position: absolute;
+    background-color: #DC9F55;
+    margin-top: -19px;
+    padding: 5px; /* Modificare questo per centrare */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 0px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+    display: none;
+  }
+
+  .dropdown-content a{
+    display: block;
+    padding: 15px;
+  }
+
+  .dropdown-content a:hover{
+    background-color: rgb(201, 130, 42);
+  }
+
+  .dropdown:hover .dropdown-content{
+    display: block;
+  }
+
+  .submit{
+    background-color: #DC9F55;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+    padding: 0;
+    height: 25px;
+    width: 112px;
+    font-family: "Copperplate", fantasy;
+  }
+
+  .submit:hover{
+      background-color: rgb(201, 130, 42);
+  }
+
+  .submit1{
+    background-color: rgb(168, 110, 35);
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+    padding: 0;
+    height: 45px;
+    width: 122px;
+    font-family: "Copperplate", fantasy;
+  }
+
+  .submit1:hover{
+      background-color: rgb(201, 130, 42);
+  }
+
+
+
+
+
+
+
+  /* inizio css Pierluigi diete */
+
+  .big-text{font-size: 55px;font-weight: 900;}
+  .start-text{font-size: 30px;font-weight: 900;}
+  .med-text{font-size: 20px;font-weight: 900;}
+  .normal-text{font-size: 20px;}
+
+  .intro-text{text-transform: uppercase;font-size: 20px;font-weight: bold;}
+
+  @media (max-width: 768px) {
+
+    .big-text{font-size: 40px;}
+
+  }
+
+
+
+  /* ! Hero */
+
+  .hero{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    position: relative;
+    height: 80vh;
+    display: flex;
+    width: 100%;
+    height: 450px;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0, 0.9)),
+    url('video/v14.mp4') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  .hero__content p{
+    line-height: 28px;
+  }
+
+  .hero:after{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top:0; left:0;
+    background: #000;
+    opacity: 0.4
+  }
+
+  .hero__content{
+    /* border: 1px solid red; */
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 30px;
+    z-index: 1;
+    position: relative;
+    top: 80px;
+  }
+
+  .hero__content h1,
+  .hero__content p{color: #fff;}
+
+  .hero--small{
+    height: 450px;
+    text-align: center;
+  }
+
+
+  #video-back{
+    position:absolute;
+    top:0;
+    width: 100%;
+    height: 160%;
+    z-index: 0;
+  }
+
+  /* ! Poster */
+
+  .poster{
+    /* border: 5px solid red; */
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+  }
+
+  .poster__img{/*border: 1px solid green;*/width: 60%; height: 100%;}
+  .poster__img img{object-fit: cover; width: 100%;height: 100%;}
+  .poster__content{overflow-x: auto;/*border: 1px solid yellow*/;width: 40%;height: 100%;padding: 40px;}
+  /* .poster__content content{object-fit: cover; width: 100px;height: 100px;} */
+
+  .poster__content h4{
+    color:#000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .poster__content p{
+    line-height: 28px;
+    margin: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .poster{flex-wrap: wrap;height: auto;}
+    .poster__img,
+    .poster__content{width: 100%;}
+  }
+
+
+  /* BG Cover */
+
+  .bg-cover{
+    /* border: 5px solid red; */
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.349);
+    padding: 100px 0;
+    background-size: cover;
+  }
+
+  .bg-cover__text{
+    overflow: auto;
+    background: rgba(0, 0, 0, 0);
+    font-family: 'Inter', sans-serif;
+    font-size: 200px;
+    /* border: 1px solid rgb(238, 255, 0); */
+    width: 62%;
+    padding: 30px;
+  }
+
+  .bg-cover__title{
+    /* border: 1px solid rgb(255, 255, 255); */
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    width: 38%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* .bg-cover__text{
+    color: #fff;
+    font-size: 20px;
+  }
+  */
+
+  .poster__content h3,h4{
+    color:#000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .bg-cover__text p{
+    line-height: 28px;
+    margin: 20px;
+  }
+
+  .bg-cover__text ul{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 35px;
+    list-style: disc;
+    color:#fff;
+    line-height: 28px;
+  }
+
+  .bg-cover__text li{
+    color: #fff;
+    font-size: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .bg-cover{flex-wrap: wrap; height: auto;}
+    .bg-cover__text,
+    .bg-cover__title{width: 100%;}
+  }
+
+
+
+  /* ! Grid */
+
+  .grid{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    display: flex;
+    max-width: 1350px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+  .grid .col{
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .grid{flex-wrap: wrap}
+  }
+
+
+
+
+  /* ! Carousel */
+
+  .main-carousel{
+    /* border: 5px solid yellow;  */
+    padding: 40px;
+  }
+
+  .carousel-cell{
+    /* border: 5px solid black; */
+    height: 400px;
+    width: 350px;
+    margin-right: 40px;
+  }
+
+  .carousel-cell__content{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    border-radius: 10%;
+    /* line-height: 30px; */
+    /* border: 1px solid red; */
+    /* text-align: center; */
+  }
+
+  .scrittura{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    padding: 15px 15px;
+    text-align: justify;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    background: rgba(0, 0, 0, 0.562);
+    overflow-x: auto;
+    /* justify-content: center;  */
+    /* line-height: 55px; */
+    /* padding: 2px; */
+  }
+
+  .scrittura h4{
+    line-height: 35px;
+    padding-top: 10px;
+    /* padding-bottom: 35px; */
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .scrittura h3{
+    padding-top: 10px;
+    padding-bottom: 35px;
+  }
+
+  .scrittura p{
+    line-height: 25px;
+    margin-top: 30px;
+  }
+
+  .scrittura ul{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 35px;
+    list-style: disc;
+    color:#fff;
+    line-height: 28px;
+  }
+
+  .scrittura li{
+    color: #fff;
+    font-size: 20px;
+  }
+
+  /* Bottoni Aggiungi dieta */
+  .button{
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    bottom: 0;
+    right: 175px;
+    transform: translateX(50%);
+  }
+
+  #Bdieta1{
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    padding: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  #Bdieta1:hover{
+    background: green;
+    color: white;
+  }
+
+  #Bdieta2{
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    padding: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  #Bdieta2:hover{
+    background: green;
+    color: white;
+  }
+
+  #Bdieta3{
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    padding: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  #Bdieta3:hover{
+    background: green;
+    color: white;
+  }
+
+  #Bdieta4{
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    padding: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  #Bdieta4:hover{
+    background: green;
+    color: white;
+  }
+
+  #Bdieta5{
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    padding: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  #Bdieta5:hover{
+    background: green;
+    color: white;
+  }
+
+  #Bdieta6{
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    padding: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  #Bdieta6:hover{
+    background: green;
+    color: white;
+  }
+
+
+
+  /* ! Content */
+
+  .content{max-width: 900px; margin: 40px auto;}
+
+
+  /* ! Helpers */
+
+  /* Scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+
+
+  .mt-1{margin-top: 50px;}
+  .mt-2{margin-top: 100px;}
+  .mt-3{margin-top: 150px;}
+  .tw{color:#fff}
+
+
+  @media (max-width: 768px) {
+    .mt-sma-0{margin-top: 0}
+    .mb-sma-0{margin-bottom: 0}
+  }
+
+
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  /* fine css Pierluigi diete */
+
+
+
+
+
+
+  .front1{
+    background-image: url(../images/IMG.jpeg);
+    background-size: cover;
+    height: 500px;
+    opacity: 1;
+    border: 1px solid grey;
+    text-align: left;
+    text-transform: uppercase;
+    text-shadow: 3px 0px black;
+    font-family: "Copperplate", fantasy;
+    font-size: 130%;
+    line-height: 50px;
+  }
+
+  .front1 h1{
+  margin-top: 30px;
+  margin-left: 14px;
+  color: rgb(192, 109, 26);
+  font-size: 41.6px;
+  }
+
+
+
+  .BoxModel{
+    padding: 10px;
+    margin: 15px;
+    margin-right: 70%;
+    margin-top: 14%;
+    width: 30%;
+    background-color: rgba(192, 109, 26, 0.6);
+    border-style: solid;
+    border-color: grey;
+    border-width: 2px;
+    border-radius: 20px;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    text-align: center;
+    text-transform: none;
+    text-shadow: none;
+    text-decoration: none;
+    font-family: "Arial", sans-serif;
+    font-size: 120%;
+  }
+
+  .BoxModel:hover{
+    padding: 10px;
+    margin: 15px;
+    margin-right: 70%;
+    margin-top: 14%;
+    width: 30%;
+    background-color: rgba(192, 109, 26, 0.9);
+    border-style: solid;
+    border-color: grey;
+    border-width: 2px;
+    border-radius: 20px;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    text-align: center;
+    text-transform: none;
+    text-shadow: none;
+    text-decoration: underline;
+    font-family: "Arial", sans-serif;
+    font-size: 121%;
+  }
+
+  #Presentation{
+
+    width: 100%;
+    height: 2800px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    background-color: #fff;
+    /* text-indent: 5px;
+    text-align: justify;
+    font-size: 120%;
+    font-family: 'Poppins',sans-serif;*/
+  }
+
+  .list{
+    margin-right: 25px;
+  }
+
+  footer{
+    background-color: #4A4743;
+  }
+  .menu{
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .menu li{
+    padding: 15px;
+    display: inline-block;
+  }
+
+  .menu li:hover{
+    background-color: #90887D;
+  }
+
+  .menu li a{
+    color: white;
+    text-decoration: none;
+  }
+
+  .copyright{
+    color:white;
+    text-align: center;
+    padding: 15px;
+    padding-bottom: 30px;
+  }
+
+  /* FINE PAGINA INIZIALE */

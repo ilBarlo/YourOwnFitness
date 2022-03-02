@@ -1,0 +1,95 @@
+pasti 
+nome, ricetta, calorie (double);
+INSERT INTO pasto VALUES ('latte','Colazione, 1 bicchiere latte scremato', 100.0);
+INSERT INTO pasto VALUES ('corn','Corn flakes, 4 cucchiaini', 120.0);
+INSERT INTO pasto VALUES ('pasta','Pranzo, 100 grammi con verdure', 100.0);
+INSERT INTO pasto VALUES ('vitello','Pranzo, filetto 120 grammi', 100.0);
+INSERT INTO pasto VALUES ('yogurt','Spuntino, 1 bicchiere', 100.0);
+INSERT INTO pasto VALUES ('frutta','Colazione, qualsiasi', 100.0);
+INSERT INTO pasto VALUES ('tonno','Cena, 120 grammi', 100.0);
+INSERT INTO pasto VALUES ('fette','Colazione, 1 pacco fette biscottate', 100.0);
+INSERT INTO pasto VALUES ('pane','Pranzo, 1 fetta di pane', 100.0);
+INSERT INTO pasto VALUES ('noci','Colazione, 6/7 noci secche', 100.0);
+INSERT INTO pasto VALUES ('olio','1 cucchiaino', 100.0);
+INSERT INTO pasto VALUES ('vitello','Cena, 1 fettina da 150 grammi', 100.0);
+INSERT INTO pasto VALUES ('marmellata','Spuntino, 4 cucchiaini', 100.0);
+INSERT INTO pasto VALUES ('ceci','Cena', 100.0);
+INSERT INTO pasto VALUES ('tacchino','Pranzo, 150 grammi', 100.0);
+INSERT INTO pasto VALUES ('gallette','Colazione, 200 grammi', 100.0);
+INSERT INTO pasto VALUES ('pesce','Pranzo, 150 grammi', 100.0);
+
+
+
+
+diete 
+nome, tipo
+INSERT INTO dieta VALUES ('dieta_punti','dieta a punti');
+INSERT INTO dieta VALUES ('dieta_col','dieta per abbassare il colesterolo');
+INSERT INTO dieta VALUES ('dieta_osteo','dieta per osteoporosi');
+INSERT INTO dieta VALUES ('dieta_cheto','dieta chetogenica');
+INSERT INTO dieta VALUES ('dieta_vegan','dieta vegana');
+INSERT INTO dieta VALUES ('dieta_vege','dieta vegetariana');
+
+dieta-pasti
+nome_dieta-nome_pasto, settimana, giorno
+INSERT INTO dieta_pasti VALUES('dieta_punti','latte',1,1);
+INSERT INTO dieta_pasti VALUES('dieta_punti','yogurt',1,2);
+INSERT INTO dieta_pasti VALUES('dieta_punti','pane',1,3);
+INSERT INTO dieta_pasti VALUES('dieta_punti','olio',2,1);
+INSERT INTO dieta_pasti VALUES('dieta_punti','vitello',2,2);
+INSERT INTO dieta_pasti VALUES('dieta_punti','marmellata',2,3);
+INSERT INTO dieta_pasti VALUES('dieta_punti','ceci',3,1);
+INSERT INTO dieta_pasti VALUES('dieta_punti','tacchino',3,2);
+INSERT INTO dieta_pasti VALUES('dieta_punti','pesce',3,3);
+
+INSERT INTO dieta_pasti VALUES('dieta_col','fette',1,1);
+INSERT INTO dieta_pasti VALUES('dieta_col','noci',1,2);
+INSERT INTO dieta_pasti VALUES('dieta_col','pane',1,3);
+INSERT INTO dieta_pasti VALUES('dieta_col','olio',2,1);
+INSERT INTO dieta_pasti VALUES('dieta_col','vitello',2,2);
+INSERT INTO dieta_pasti VALUES('dieta_col','pasta',2,3);
+INSERT INTO dieta_pasti VALUES('dieta_col','ceci',3,1);
+INSERT INTO dieta_pasti VALUES('dieta_col','tacchino',3,2);
+INSERT INTO dieta_pasti VALUES('dieta_col','pesce',3,3);
+
+INSERT INTO dieta_pasti VALUES('dieta_osteo','latte',1,1);
+INSERT INTO dieta_pasti VALUES('dieta_osteo','pesce',1,2);
+INSERT INTO dieta_pasti VALUES('dieta_osteo','pane',1,3);
+INSERT INTO dieta_pasti VALUES('dieta_osteo','corn',2,1);
+INSERT INTO dieta_pasti VALUES('dieta_osteo','vitello',2,2);
+INSERT INTO dieta_pasti VALUES('dieta_osteo','marmellata',2,3);
+INSERT INTO dieta_pasti VALUES('dieta_osteo','ceci',3,1);
+INSERT INTO dieta_pasti VALUES('dieta_osteo','tacchino',3,2);
+INSERT INTO dieta_pasti VALUES('dieta_osteo','pesce',3,3);
+
+INSERT INTO dieta_pasti VALUES('dieta_cheto','latte',1,1);
+INSERT INTO dieta_pasti VALUES('dieta_cheto','yogurt',1,2);
+INSERT INTO dieta_pasti VALUES('dieta_cheto','pane',1,3);
+INSERT INTO dieta_pasti VALUES('dieta_cheto','olio',2,1);
+INSERT INTO dieta_pasti VALUES('dieta_cheto','vitello',2,2);
+INSERT INTO dieta_pasti VALUES('dieta_cheto','marmellata',2,3);
+INSERT INTO dieta_pasti VALUES('dieta_cheto','ceci',3,1);
+INSERT INTO dieta_pasti VALUES('dieta_cheto','tacchino',3,2);
+INSERT INTO dieta_pasti VALUES('dieta_cheto','pesce',3,3);
+
+
+INSERT INTO dieta_pasti VALUES('dieta_vegan','fette',1,1);
+INSERT INTO dieta_pasti VALUES('dieta_vegan','noci',1,2);
+INSERT INTO dieta_pasti VALUES('dieta_vegan','pane',1,3);
+INSERT INTO dieta_pasti VALUES('dieta_vegan','olio',2,1);
+INSERT INTO dieta_pasti VALUES('dieta_vegan','vitello',2,2);
+INSERT INTO dieta_pasti VALUES('dieta_vegan','pasta',2,3);
+INSERT INTO dieta_pasti VALUES('dieta_vegan','ceci',3,1);
+INSERT INTO dieta_pasti VALUES('dieta_vegan','tacchino',3,2);
+INSERT INTO dieta_pasti VALUES('dieta_vegan','pesce',3,3);
+
+
+INSERT INTO dieta_pasti VALUES('dieta_vege','fette',1,1);
+INSERT INTO dieta_pasti VALUES('dieta_vege','noci',1,2);
+INSERT INTO dieta_pasti VALUES('dieta_vege','pane',1,3);
+INSERT INTO dieta_pasti VALUES('dieta_vege','olio',2,1);
+INSERT INTO dieta_pasti VALUES('dieta_vege','vitello',2,2);
+INSERT INTO dieta_pasti VALUES('dieta_vege','pasta',2,3);
+INSERT INTO dieta_pasti VALUES('dieta_vege','ceci',3,1);
+INSERT INTO dieta_pasti VALUES('dieta_vege','tacchino',3,2);
+INSERT INTO dieta_pasti VALUES('dieta_vege','pesce',3,3);

@@ -1,0 +1,119 @@
+allenamento
+<?php
+session_start();
+require "conn.php";
+require "dbclass.php";
+
+include("ajax.js");
+
+echo $_SESSION['email'];
+$db = new DB_functions();
+$type = $_POST['submit'];
+
+if ($type == "Allenamento"){
+	$trainings = $db->getAllTrainings($conn);
+}
+else $trainings = $db->getTrainingsPerType($type,$conn);
+
+if(mysqli_num_rows($trainings) > 0){ 
+	for ($x = 0; $x < mysqli_num_rows($trainings); $x++){
+		$resrow = mysqli_fetch_row($trainings);
+		$nome = $resrow[0];
+		$tipo = $resrow[1];
+		$durata = $resrow[2];
+		$nome_esercizio_attrezzo = $resrow[3];
+		$peso = $resrow[4];
+		$serie = $resrow[5];
+		$ripetizioni = $resrow[6];
+		echo $nome.$tipo.$durata.$nome_esercizio_attrezzo.$peso.$serie.$ripetizioni;
+	}
+}
+?>
+
+
+<!-- Utilizzo l'iframe in modo da poter visualizzare le diverse schede sulla stessa pagina "allenamento.php" -->
+<!DOCTYPE="html">
+<!-- Your Own Fitness - Page: Allenamento -->
+<html lang="it"> <!-- HTML Language, lo si mette per default -->
+	<head>
+		<!-- Intestazione, dichiariamo i meta dati (N.B. keywords non necessari) -->
+    <title> Your Own Fitness - Allenamento </title>
+		<meta name="author" content="Francesco Barletta" />
+		<meta name="description" content="Your Own Fitness (YOF) - Allenamento" />
+		<meta name="keywords" content="fitness" />
+<!-- File .css external, messo nella repository css/style.css -->
+	 <link rel="stylesheet" type="text/css" href="css/styles.css">
+	 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	 <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+ </head>
+
+ <body>
+<!-- Testata del sito, Logo del sito -->
+<header>
+
+	<div class="Login"> <!-- Percorso per la registrazione -->
+		<a href="login.php" style="color: black; text-decoration: none" title="Clicca per il login">
+		Login
+	</a></div>
+
+	<img class="Logo" width="10%" src="images/logo.png" alt="Il logo andrà qui"/>
+
+</header>
+
+<!-- Menù del sito, realizzato come tendina a comparsa verso il basso -->
+<!-- Menù del sito, realizzato come tendina a comparsa verso il basso -->
+
+
+      <form id = "trainingform" method='post'>
+
+        <div class="user-details">
+
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input name="em" type="text" placeholder="Inserisci la tua email">
+          </div>
+
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input name="pw" type="password" placeholder="Inserisci la password">
+          </div>
+        </div>
+
+        <div class="button">
+          <input id = "login" name = "login" type="submit" value="Login">
+        </div>
+      </form>
+
+
+</body>
+</html>
+
+
+ajax
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#login').click(function (e) {
+            alert("entering function");
+            e.preventDefault();
+			/*alert("Entering ajax");
+			$.ajax({
+			method: "post",
+			url: "store_training.php",
+			data: $('#trainingform').serialize(),
+			dataType: "text",
+			success: function(){
+				alert ("Registration succesful!");
+			}
+			})*/
+		})
+    });
+
+    
+</script>
+
+store
+<?php 
+if (isset($_SESSION) echo $_SESSION['email'];
+echo $_POST['em'];
+echo $_POST['pw'];
+?>
